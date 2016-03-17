@@ -127,7 +127,7 @@ angular.module("hateoas", ["ngResource"])
 					// if links are present, consume object and convert links
 					if (data[linksKey]) {
 						var links = {};
-						links[linksKey] = arrayToObject("rel", "href", data[linksKey]);
+						links[linksKey] = arrayToObject("rel", "uri", data[linksKey]);
 						data = angular.extend(this, data, links, { resource: resource });
 					}
 
